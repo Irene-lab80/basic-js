@@ -16,7 +16,8 @@ const chainMaker = {
     if (
       this.chain[position - 1] === undefined ||
       typeof position !== "number"
-    ) {
+    ) {  this.chain = [];
+      return result;
       throw new Error();
     } else {
       this.chain.splice(position - 1, 1);
